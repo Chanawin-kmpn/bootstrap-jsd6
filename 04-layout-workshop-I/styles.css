@@ -1,0 +1,13 @@
+body {
+  height: 100vh;
+  background-color: hsl(232, 20%, 16%);
+}
+
+.box {
+  background: hsl(228, 29%, 20%);
+  aspect-ratio: 16/10;
+}
+
+.box-lg {
+  aspect-ratio: 1;
+}
