@@ -26,5 +26,348 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body></body>
+  <body
+    class="d-flex flex-column justify-content-center align-items-center vh-100"
+  >
+    <div class="container d-flex flex-column justify-content-center gap-3 p-0">
+      <div class="form-header-section rounded-2 shadow p-3">
+        <p class="text-white text-center m-0">
+          <span class="fw-bold">Try it free 7 days</span> then $20/mo.
+          thereafter
+        </p>
+      </div>
+      <form
+        class="form-input-section d-flex flex-column gap-4 rounded-2 needs-validation p-5"
+        novalidate
+      >
+        <div id="liveAlertPlaceholder"></div>
+        <div class="fname-input">
+          <input
+            class="form-control position-relative rounded-2 p-3"
+            type="text"
+            name="firstName"
+            placeholder="First Name"
+            required
+            id="fname-input"
+            aria-describedby="inputGroupPrepend"
+          />
+          <div class="valid-feedback position-absolute">Success!</div>
+          <div class="invalid-feedback position-absolute">
+            Please enter your firstname!
+          </div>
+        </div>
+        <div class="lname-input">
+          <input
+            class="form-control position-relative rounded-2 p-3"
+            type="text"
+            name="lastName"
+            placeholder="Last Name"
+            required
+            id="lname-input"
+          />
+          <div class="valid-feedback position-absolute">Success!</div>
+          <div class="invalid-feedback position-absolute">
+            Please enter your lastname!
+          </div>
+        </div>
+        <div class="email-input">
+          <input
+            class="form-control position-relative rounded-2 p-3"
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            required
+            id="email-input"
+          />
+          <div class="valid-feedback position-absolute">Success!</div>
+          <div class="invalid-feedback position-absolute">
+            Please enter your email!
+          </div>
+        </div>
+        <div class="password-input">
+          <input
+            class="form-control position-relative p-3"
+            elativerounde
+            p
+            d-2
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+            id="password-input"
+          />
+          <div class="valid-feedback position-absolute">Success!</div>
+          <div class="invalid-feedback position-absolute">
+            Please enter your password!
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="text-white text-uppercase fw-bold border-0 rounded-2 p-3"
+          id="claim-btn"
+        >
+          Claim your free trial
+        </button>
+        <p class="text-center text-secondary m-0">
+          By clicking the button, you are agreeing to our
+          <a
+            href="#"
+            class="text-danger fw-bold text-decoration-none"
+            role="button"
+            data-bs-toggle="modal"
+            data-bs-target="#termandservicesModel"
+            >Terms and Services</a
+          >
+        </p>
+        <div
+          class="modal fade"
+          id="termandservicesModel"
+          tabindex="-1"
+          aria-labelledby="termandservicesModelLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-scrollable rounded-2">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="termandservicesModelLabel">
+                  Terms and Services
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <p>Welcome to My login page!</p>
+                <p>
+                  These terms and conditions outline the rules and regulations
+                  for the use of Company Name's Website, located at Website.com.
+                </p>
+                <br />
+                <p>
+                  By accessing this website we assume you accept these terms and
+                  conditions. Do not continue to use Website Name if you do not
+                  agree to take all of the terms and conditions stated on this
+                  page.
+                </p>
+                <br />
+                <p>
+                  The following terminology applies to these Terms and
+                  Conditions, Privacy Statement and Disclaimer Notice and all
+                  Agreements: “Client”, “You” and “Your” refers to you, the
+                  person log on this website and compliant to the Company's
+                  terms and conditions. “The Company”, “Ourselves”, “We”, “Our”
+                  and “Us”, refers to our Company. “Party”, “Parties”, or “Us”,
+                  refers to both the Client and ourselves. All terms refer to
+                  the offer, acceptance and consideration of payment necessary
+                  to undertake the process of our assistance to the Client in
+                  the most appropriate manner for the express purpose of meeting
+                  the Client's needs in respect of provision of the Company's
+                  stated services, in accordance with and subject to, prevailing
+                  law of Netherlands. Any use of the above terminology or other
+                  words in the singular, plural, capitalization and/or he/she or
+                  they, are taken as interchangeable and therefore as referring
+                  to same.
+                </p>
+                <h2 class="fs-5">Cookies</h2>
+                <p>
+                  We employ the use of cookies. By accessing Website Name, you
+                  agreed to use cookies in agreement with the Company Name's
+                  Privacy Policy.
+                </p>
+                <br />
+                <p>
+                  We employ the use of cookies. By accessing Website Name, you
+                  agreed to use cookies in agreement with the Company Name's
+                  Privacy Policy.
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-dismiss="modal"
+                  role="button"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- <script>
+      const alertPlaceholder = document.getElementById("liveAlertPlaceholder");
+      const appendAlert = (message, type) => {
+        const wrapper = document.createElement("div");
+        wrapper.innerHTML = [
+          `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+          `   <div>${message}</div>`,
+          '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+          "</div>",
+        ].join("");
+
+        alertPlaceholder.append(wrapper);
+      };
+
+      const alertTrigger = document.getElementById("claim-btn");
+      const fnameInput = document.getElementById("fname-input");
+      const lnameInput = document.getElementById("lname-input");
+      const emailInput = document.getElementById("email-input");
+      const passwordInput = document.getElementById("password-input");
+
+      if (alertTrigger) {
+        alertTrigger.addEventListener("click", (e) => {
+          e.preventDefault();
+          console.log(fnameInput.value);
+          console.log(typeof fnameInput.value);
+          if (fnameInput == "") {
+            console.log("No");
+          } else {
+            console.log("Hello");
+          }
+          appendAlert("Nice, you triggered this alert message!", "success");
+        });
+      }
+    </script> -->
+    <script>
+      (() => {
+        "use strict";
+        let isAlertAppended = false;
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll(".needs-validation");
+        // Loop over them and prevent submission
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              event.preventDefault();
+              event.stopPropagation();
+              console.log(!isAlertAppended); //True at first , False at second
+              console.log(isAlertAppended); //False at first , True at second
+              // If form valid and isAlertAppended is false at first but !isAlertAppended make isAlertAppended to true So if method below will work.
+
+              // Then when isAlertAppended trigger at first it change to true and then !isAlertAppended make isAlertAppended to falsy. So if method below will not work.
+              if (form.checkValidity() && !isAlertAppended) {
+                // console.log(!isAlertAppended);
+                appendAlert(
+                  "Nice, you triggered this alert message!",
+                  "success"
+                );
+                isAlertAppended = true;
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+      const alertPlaceholder = document.getElementById("liveAlertPlaceholder");
+      const appendAlert = (message, type) => {
+        const wrapper = document.createElement("div");
+        wrapper.innerHTML = [
+          `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+          `   <div>${message}</div>`,
+          '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+          "</div>",
+        ].join("");
+
+        alertPlaceholder.append(wrapper);
+      };
+    </script>
+    <!-- <script>
+      (() => {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll(".needs-validation");
+        const alertPlaceholder = document.getElementById(
+          "liveAlertPlaceholder"
+        );
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              // alertPlaceholder.innerHTML = ``;
+              console.log(!form.checkVisibility());
+              // event prevent both of valid form and not valid form
+              event.preventDefault();
+              event.stopPropagation();
+              // If valid form then show alert
+              if (form.checkValidity()) {
+                alertPlaceholder.innerHTML = `
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  Success! Your free trial has been claimed.
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+              `;
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script> -->
+    <!-- <script>
+      (() => {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll(".needs-validation");
+        const alertPlaceholder = document.getElementById(
+          "liveAlertPlaceholder"
+        );
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            async (event) => {
+              // Prevent default form submission
+              event.preventDefault();
+              event.stopPropagation();
+
+              // Check if the form is valid
+              if (form.checkValidity()) {
+                // Reset any existing alert
+                alertPlaceholder.innerHTML = "";
+
+                // Simulate an asynchronous action (e.g., form submission)
+                // In a real scenario, you might use AJAX to submit the form data
+                await new Promise((resolve) => setTimeout(resolve, 1000));
+
+                // Show a success message
+                alertPlaceholder.innerHTML = `
+                  <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    Success! Your free trial has been claimed.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+                `;
+              } else {
+                // Show an error message
+                alertPlaceholder.innerHTML = `
+                  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    Please fix the errors in the form before claiming the free trial.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+                `;
+              }
+
+              // Add the 'was-validated' class to apply Bootstrap styles
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script> -->
+  </body>
 </html>

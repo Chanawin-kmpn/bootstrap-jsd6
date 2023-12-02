@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 96%, 73%);
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 45rem;
+}
+
+.form-header-section {
+  background-color: hsl(247, 32%, 49%);
+  box-shadow: 0 5px hsl(358, 61%, 63%);
+}
+
+.form-input-section {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.valid-feedback,
+.invalid-feedback {
+  max-width: fit-content;
+  margin-block: 1.5px;
+}
+
+#claim-btn {
+  background-color: hsl(153, 59%, 51%);
+  box-shadow: 0 5px hsl(154, 53%, 45%);
+}
+
+#claim-btn:hover {
+  background-color: hsl(152, 57%, 48%);
+}
+
+#claim-btn:active {
+  transform: translateY(5px);
+  box-shadow: none;
+}
