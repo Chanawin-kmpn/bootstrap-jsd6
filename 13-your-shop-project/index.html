@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/35666dd7c9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Flex-exercise-6</title>
+  </head>
+  <body class="d-flex flex-column align-items-center">
+    <div class="wrapper">
+      <!-- Start Header section -->
+      <header
+        class="d-flex justify-content-between align-items-center gap-5 m-3"
+      >
+        <a
+          href="#"
+          class="logo-section d-flex align-items-center rounded-2 px-3"
+        >
+          <img
+            src="https://plantae.co/wp-content/uploads/2022/06/logo-1.svg"
+            alt="plantae-logo"
+            class="logo"
+          />
+        </a>
+        <nav
+          class="nav-bar d-flex flex-column flex-sm-row justify-content-center align-items-center rounded-2 p-4"
+        >
+          <div class="search flex-fill position-relative">
+            <label for="search" class="d-none">Search</label>
+            <input
+              type="text"
+              name="search"
+              placeholder="Search..."
+              class="border-0 rounded-5 p-3"
+              id="search"
+            />
+            <button
+              type="submit"
+              class="position-absolute end-0 border-0 rounded-end-5"
+              id="submit-btn"
+            >
+              <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+            </button>
+          </div>
+          <div
+            class="nav-link d-flex flex-column flex-sm-row gap-4 gap-sm-3 text-center"
+          >
+            <a class="fw-bold text-decoration-none" href="#">Home</a>
+            <a class="fw-bold text-decoration-none" href="#">Product</a>
+            <a class="fw-bold text-decoration-none" href="#">About</a>
+            <a class="fw-bold text-decoration-none" href="#">Contact</a>
+          </div>
+        </nav>
+      </header>
+      <!-- End Header Section -->
+      <!-- Start Main Section -->
+      <main class="d-flex flex-column gap-2 gap-sm-5 rounded-3 mx-3">
+        <div
+          class="main-header d-flex flex-column flex-sm-row align-items-center gap-2 gap-sm-5 text-center rounded-3 p-3"
+        >
+          <h1 class="main-title fw-bold fs-1 me-auto">
+            Plant your life, Strong in side
+          </h1>
+          <div class="filter d-flex flex-column">
+            <label for="proteins" class="fs-4 fw-bold">Filter by:</label>
+            <select
+              name="proteins"
+              class="fw-bold bg-white rounded-3 p-1"
+              id="proteins"
+            >
+              <option value="Select">Select</option>
+              <option value="thai-tea">Thai Tea</option>
+              <option value="chocolate">Chocolate</option>
+              <option value="vanila">Vanila</option>
+              <option value="matcha">Matcha</option>
+              <option value="mixed-berry">Mixed Berries</option>
+              <option value="mango">Mango</option>
+            </select>
+          </div>
+          <div class="sort d-flex flex-column">
+            <label for="type" class="fs-4 fw-bold">Sort by:</label>
+            <select
+              name="types"
+              class="fw-bold bg-white rounded-3 p-1"
+              id="types"
+            >
+              <option value="Select">Select</option>
+              <option value="best-seller">Best Seller</option>
+              <option value="sell-price position-absolute fs-5">
+                Sell Price
+              </option>
+            </select>
+          </div>
+        </div>
+        <ul
+          class="items-container d-flex flex-wrap justify-content-start justify-content-lg-center m-0 p-0"
+        >
+          <li
+            class="item-card new-produce position-relative flex-grow-1 flex-shrink-1 list-unstyled rounded-3"
+            data-new="NEW"
+          >
+            <img
+              src="./image/plantae-thai-tea.jpg"
+              alt="plantae-thai-tea"
+              class="item-image rounded-top-3"
+            />
+            <div class="item-description d-flex flex-column p-3">
+              <p class="item-name fs-4 fw-bold m-0">Original Thai Tea</p>
+              <p class="item-type opacity-75 fs-6 fw-bold mb-3">
+                Complete Plant Protein
+              </p>
+              <div
+                class="purchase-section d-flex justify-content-between align-items-center mt-3"
+              >
+                <button
+                  class="buy-btn fs-3 text-white border-0 rounded-3 py-2 px-3"
+                >
+                  ซื้อเลย
+                </button>
+                <span class="fs-4 align-self-end mt-3 fw-bold">฿1,790</span>
+              </div>
+            </div>
+          </li>
+          <li
+            class="item-card best-seller position-relative flex-grow-1 flex-shrink-1 list-unstyled rounded-3"
+            data-sell="BEST SELLER"
+          >
+            <img
+              src="./image/plantae-chocolate.jpg"
+              alt="plantae-chocolate"
+              class="item-image rounded-top-3"
+            />
+            <div class="item-description d-flex flex-column p-3">
+              <p class="item-name fs-4 fw-bold m-0">Dutch Chocolate</p>
+              <p class="item-type opacity-75 fs-6 fw-bold mb-3">
+                Complete Plant Protein
+              </p>
+              <div
+                class="purchase-section d-flex justify-content-between align-items-center mt-3"
+              >
+                <button
+                  class="buy-btn fs-3 text-white border-0 rounded-3 py-2 px-3"
+                >
+                  ซื้อเลย
+                </button>
+                <span
+                  class="fs-4 align-self-end mt-3 sell text-decoration-line-through fw-bold"
+                  >฿1,590</span
+                >
+                <span class="sell-price position-absolute fs-5 fw-bold"
+                  >฿1,090</span
+                >
+              </div>
+            </div>
+          </li>
+          <li
+            class="item-card best-seller position-relative flex-grow-1 flex-shrink-1 list-unstyled rounded-3"
+            data-sell="BEST SELLER"
+          >
+            <img
+              src="./image/plantae-vanila.jpg"
+              alt="plantea-vanila"
+              class="item-image rounded-top-3"
+            />
+            <div class="item-description d-flex flex-column p-3">
+              <p class="item-name fs-4 fw-bold m-0">Vanilla</p>
+              <p class="item-type opacity-75 fs-6 fw-bold mb-3">
+                Complete Plant Protein
+              </p>
+              <div
+                class="purchase-section d-flex justify-content-between align-items-center mt-3"
+              >
+                <button
+                  class="buy-btn fs-3 text-white border-0 rounded-3 py-2 px-3"
+                >
+                  ซื้อเลย
+                </button>
+                <span
+                  class="fs-4 align-self-end mt-3 sell text-decoration-line-through fw-bold"
+                  >฿1,590</span
+                >
+                <span class="sell-price position-absolute fs-5 fw-bold"
+                  >฿1,090</span
+                >
+              </div>
+            </div>
+          </li>
+          <li
+            class="item-card position-relative flex-grow-1 flex-shrink-1 list-unstyled rounded-3"
+          >
+            <img
+              src="./image/plantae-strawberry.jpg"
+              alt="plantea-vanila"
+              class="item-image rounded-top-3"
+            />
+            <div class="item-description d-flex flex-column p-3">
+              <p class="item-name fs-4 fw-bold m-0">Strawberry</p>
+              <p class="item-type opacity-75 fs-6 fw-bold mb-3">
+                Complete Plant Protein
+              </p>
+              <div
+                class="purchase-section d-flex justify-content-between align-items-center mt-3"
+              >
+                <button
+                  class="buy-btn fs-3 text-white border-0 rounded-3 py-2 px-3"
+                >
+                  ซื้อเลย
+                </button>
+                <span
+                  class="fs-4 align-self-end mt-3 sell text-decoration-line-through fw-bold"
+                  >฿1,590</span
+                >
+                <span class="sell-price position-absolute fs-5 fw-bold"
+                  >฿1,090</span
+                >
+              </div>
+            </div>
+          </li>
+          <li
+            class="item-card position-relative flex-grow-1 flex-shrink-1 list-unstyled rounded-3"
+          >
+            <img
+              src="./image/plantae-matcha.jpg"
+              alt="plantae-matcha"
+              class="item-image rounded-top-3"
+            />
+            <div class="item-description d-flex flex-column p-3">
+              <p class="item-name fs-4 fw-bold m-0">Matcha</p>
+              <p class="item-type opacity-75 fs-6 fw-bold mb-3">
+                Complete Plant Protein
+              </p>
+              <div
+                class="purchase-section d-flex justify-content-between align-items-center mt-3"
+              >
+                <button
+                  class="buy-btn fs-3 text-white border-0 rounded-3 py-2 px-3"
+                >
+                  ซื้อเลย
+                </button>
+                <span
+                  class="fs-4 align-self-end mt-3 sell text-decoration-line-through fw-bold"
+                  >฿1,590</span
+                >
+                <span class="sell-price position-absolute fs-5 fw-bold"
+                  >฿1,090</span
+                >
+              </div>
+            </div>
+          </li>
+          <li
+            class="item-card position-relative flex-grow-1 flex-shrink-1 list-unstyled rounded-3"
+          >
+            <img
+              src="./image/plantae-hojicha.jpg"
+              alt="plantae-matcha"
+              class="item-image rounded-top-3"
+            />
+            <div class="item-description d-flex flex-column p-3">
+              <p class="item-name fs-4 fw-bold m-0">Hojicha</p>
+              <p class="item-type opacity-75 fs-6 fw-bold mb-3">
+                Complete Plant Protein
+              </p>
+              <div
+                class="purchase-section d-flex justify-content-between align-items-center mt-3"
+              >
+                <button
+                  class="buy-btn fs-3 text-white border-0 rounded-3 py-2 px-3"
+                >
+                  ซื้อเลย
+                </button>
+                <span
+                  class="fs-4 align-self-end mt-3 text-decoration-line-through fw-bold"
+                  >฿1,590</span
+                >
+              </div>
+            </div>
+          </li>
+          <li
+            class="item-card position-relative flex-grow-1 flex-shrink-1 list-unstyled rounded-3"
+          >
+            <img
+              src="./image/plantae-mixed-berries.jpg"
+              alt="plantae-mixed-berries"
+              class="item-image rounded-top-3"
+            />
+            <div class="item-description d-flex flex-column p-3">
+              <p class="item-name fs-4 fw-bold m-0">Mixed Berries</p>
+              <p class="item-type opacity-75 fs-6 fw-bold mb-3">
+                Complete Plant Protein
+              </p>
+              <div
+                class="purchase-section d-flex justify-content-between align-items-center mt-3"
+              >
+                <button
+                  class="buy-btn fs-3 text-white border-0 rounded-3 py-2 px-3"
+                >
+                  ซื้อเลย
+                </button>
+                <span
+                  class="fs-4 align-self-end mt-3 sell text-decoration-line-through fw-bold"
+                  >฿1,790
+                </span>
+                <span class="sell-price position-absolute fs-5 fw-bold"
+                  >฿1,290</span
+                >
+              </div>
+            </div>
+          </li>
+          <li
+            class="item-card position-relative flex-grow-1 flex-shrink-1 list-unstyled rounded-3"
+          >
+            <img
+              src="./image/plantae-mango.jpg"
+              alt="plantae-mango"
+              class="item-image rounded-top-3"
+            />
+            <div class="item-description d-flex flex-column p-3">
+              <p class="item-name fs-4 fw-bold m-0">Mango</p>
+              <p class="item-type opacity-75 fs-6 fw-bold mb-3">
+                Complete Plant Protein
+              </p>
+              <div
+                class="purchase-section d-flex justify-content-between align-items-center mt-3"
+              >
+                <button
+                  class="buy-btn fs-3 text-white border-0 rounded-3 py-2 px-3"
+                >
+                  ซื้อเลย
+                </button>
+                <span class="fs-4 align-self-end mt-3 fw-bold">฿1,790</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </main>
+      <!-- End Main Section -->
+      <!-- Start Footer section -->
+      <footer
+        class="d-flex flex-column flex-sm-row justify-content-between align-items-center rounded-3 m-3 py-2 px-3"
+      >
+        <a href="#" class="logo-section">
+          <img
+            src="https://plantae.co/wp-content/uploads/2022/06/logo-1.svg"
+            alt="plantae-logo"
+            class="logo"
+          />
+        </a>
+        <div
+          class="footer-content d-flex flex-column flex-sm-row align-items-center gap-3"
+        >
+          <p class="copy-right me-auto mb-0">
+            &copy; All rights reserve. 2023, Plantae.life
+          </p>
+          <a href="#" class="privacy-link fw-bold text-decoration-none">
+            Privacy Policy</a
+          >
+          <a href="" class="cookie-link fw-bold text-decoration-none"
+            >Cookies Policy
+          </a>
+        </div>
+      </footer>
+      <!-- End Footer Section -->
+    </div>
+  </body>
+</html>

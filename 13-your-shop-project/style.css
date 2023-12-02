@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: "Noto Sans Thai Looped", sans-serif !important;
+  background-color: hsl(168, 85%, 16%);
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  min-width: 375px;
+}
+
+.logo-section {
+  min-width: 200px;
+  max-width: 12rem;
+  background-color: hsl(140, 33%, 64%);
+  padding-block: 2.25rem !important;
+}
+
+.nav-bar {
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(140, 33%, 64%);
+}
+
+.search {
+  width: 100%;
+}
+
+#search {
+  width: 100%;
+  min-width: 200px;
+  font-size: 1.25rem;
+}
+
+#search:focus {
+  outline: 1px solid transparent;
+}
+
+#submit-btn {
+  color: gray;
+  width: 20%;
+  height: 100%;
+}
+
+.nav-link > a {
+  font-size: 1.25rem;
+  color: hsl(168, 85%, 16%);
+}
+
+main {
+  background-color: hsl(132, 33%, 68%);
+  padding: 2rem;
+}
+
+.main-title {
+  color: hsl(168, 85%, 16%);
+  font-size: 3rem !important;
+  cursor: default;
+}
+
+.filter,
+.sort {
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 150px;
+}
+
+select {
+  border-color: hsl(168, 85%, 16%);
+  cursor: pointer;
+}
+
+label {
+  color: hsl(168, 85%, 16%);
+}
+
+ul.items-container {
+  gap: 2.15rem;
+}
+
+.item-card {
+  flex-basis: 250px;
+  max-width: 250px;
+  background-color: hsl(21, 60%, 44%);
+  box-shadow: 15px 15px 30px -20px hsl(164, 92%, 5%);
+  transition: 0.3s all ease-in-out;
+  cursor: pointer;
+}
+
+.item-card:hover {
+  transform: scale(1.05);
+}
+
+.item-description {
+  color: hsl(164, 92%, 5%);
+}
+
+.new-produce::after {
+  content: attr(data-new);
+  position: absolute;
+  top: 1rem;
+  left: -1rem;
+  color: #fff;
+  background: red;
+  border-radius: 10px 5px 5px 10px;
+  padding: 0.5rem;
+}
+
+.best-seller::after {
+  content: attr(data-sell);
+  position: absolute;
+  top: 1rem;
+  left: -1rem;
+  color: #fff;
+  background: rgb(22, 22, 129);
+  border-radius: 10px 5px 5px 10px;
+  padding: 0.5rem;
+}
+
+.sell-price {
+  bottom: 2.5rem;
+  right: 1rem;
+  color: rgb(134, 7, 7);
+}
+
+.buy-btn {
+  background-color: hsl(168, 85%, 16%);
+  box-shadow: 0 8px hsl(164, 92%, 5%);
+  cursor: pointer;
+  transition: transform 5ms ease-out;
+}
+
+.buy-btn:active {
+  transform: translateY(8px);
+  box-shadow: none;
+}
+
+footer {
+  background-color: hsl(140, 33%, 64%);
+}
+
+.footer-content {
+  color: hsl(168, 85%, 16%);
+}
+
+.copy-right {
+  cursor: default;
+}
+
+.privacy-link,
+.cookie-link {
+  color: hsl(168, 85%, 16%);
+  transition: color 0.2s ease-out;
+}
+
+.privacy-link:hover,
+.cookie-link:hover {
+  color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .item-card {
+    max-width: none;
+  }
+}
+
+@media (max-width: 880px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-link > a {
+    border-bottom: 1px solid hsl(168, 85%, 16%);
+  }
+}
